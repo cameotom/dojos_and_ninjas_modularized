@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Dojo</title>
+
+</head>
+<body>
+
+    <h1>Edit {{dojo.name}}</h1>
+    <form action="/dojo/update" method="POST">
+        <input type="hidden" name="id" value={{dojo.id}}>
+        <label for="name" >Name:</label>
+        <input type="text" name="name" value={{dojo.name}}>
+        <input type="submit" value="Edit Dojo">
+    </form>
+
+    <a href="/dojos">Home</a>
+
+</body>
+</html>

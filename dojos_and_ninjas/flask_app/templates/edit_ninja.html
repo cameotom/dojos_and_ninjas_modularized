@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Ninja</title>
+
+</head>
+<body>
+
+    <h1>Edit {{ninja.first_name}}</h1>
+    <form action="/ninja/update" method="POST">
+        <input type="hidden" name="id" value={{ninja.id}}>
+        <input type="hidden" name="dojo_id" value={{ninja.dojo_id}}>
+        <label for="fname" >First Name:</label>
+        <input type="text" name="fname" value={{ninja.first_name}}>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" value={{ninja.last_name}}>
+        <label for="age" >Email:</label>
+        <input type="text" name="age" value={{ninja.age}}>
+        <input type="submit" value="Edit User">
+    </form>
+
+    <a href="/">Home</a>
+
+</body>
+</html>
